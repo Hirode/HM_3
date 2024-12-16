@@ -15,14 +15,14 @@ import com.codeborne.selenide.Configuration;
 
        public HomePage enterDestination(String destination) {
         Configuration.timeout = 20000;
-           searchInput.setValue(destination);
-           searchInput.shouldHave(Condition.value(destination));
-           searchSelect.click();
-           return this;
+        searchInput.setValue(destination);
+        searchInput.shouldHave(Condition.value(destination));
+        searchSelect.click();
+        return this;
        }
        public SearchResultPage clickSearchButton() {
         Configuration.timeout = 20000;
-           searchButton.click();    
-           return new SearchResultPage();
+        searchButton.click();    
+        return new SearchResultPage();
        }
    }
