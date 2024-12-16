@@ -4,13 +4,19 @@ import org.testng.annotations.Test;
 
 import example.example.HomePage;
 import example.example.SearchResultPage;
-
+import com.codeborne.selenide.Configuration;
 
 import static com.codeborne.selenide.Selenide.*;
    import io.qameta.allure.Description;
 
+
+
+
    public class BookingTest {
-    
+        static {
+        Configuration.timeout = 10000; // Устанавливаем глобальный тайм-аут в 10 секунд
+        Configuration.holdBrowserOpen = true; // Устанавливаем браузер по умолчанию
+        }
        @Test    
        @Description("Проверка поиска и фильтрации отелей на Booking.com для города Анталья")
        public void bookingTest() {
