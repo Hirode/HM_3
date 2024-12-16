@@ -17,8 +17,7 @@ import static com.codeborne.selenide.Selenide.*;
        public boolean isDestinationDisplayed(String destination) {
            return destinationLabel.getText().contains(destination);
        }
-
-    
+       
        public boolean areAllHotelsFiveStar() {
            for (SelenideElement hotel : hotels) {
                if (!hotel.getText().contains("5 из 5")) {
